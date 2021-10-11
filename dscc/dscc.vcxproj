@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dependencies\include\ImGuizmo\ImGuizmo.cpp" />
+    <ClCompile Include="..\dependencies\include\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\dependencies\include\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\dependencies\include\imgui\imgui.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\dependencies\include\imgui\imgui_demo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="..\dependencies\include\imgui\imgui_draw.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="..\dependencies\include\imgui\imgui_tables.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="..\dependencies\include\imgui\imgui_widgets.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="src\GUI\GUIFileExplorer.cpp" />
+    <ClCompile Include="src\GUI\GUIViewport.cpp" />
+    <ClCompile Include="src\GUI\GUIUSDAttributeEditor.cpp" />
+    <ClCompile Include="src\OpenGl\OGLVertexArray.cpp" />
+    <ClCompile Include="src\IMGUILayer.cpp" />
+    <ClCompile Include="src\SceneRenderLayer.cpp" />
+    <ClCompile Include="src\OpenGl\OGLFrameBuffer.cpp" />
+    <ClCompile Include="src\Renderer\FrameBuffer.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Scene\Scene.cpp" />
+    <ClCompile Include="src\OpenGl\OGLRendererAPI.cpp" />
+    <ClCompile Include="src\OpenGl\OGLBuffer.cpp" />
+    <ClCompile Include="src\OpenGl\OGLShader.cpp" />
+    <ClCompile Include="src\OpenGl\OGLGraphicsContext.cpp" />
+    <ClCompile Include="src\Scene\Camera.cpp" />
+    <ClCompile Include="src\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\window.cpp" />
+    <ClCompile Include="src\Scene\USD\USDStage.cpp" />
+    <ClCompile Include="src\Scene\USD\USDHierarchyItem.cpp" />
+    <ClCompile Include="src\Scene\USD\USDHierarchyModel.cpp" />
+    <ClCompile Include="src\GUI\USDHierarchyGUI.cpp" />
+    <ClCompile Include="src\Scene\USD\USDPrim.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dependencies\include\ImGuizmo\ImGuizmo.h" />
+    <ClInclude Include="..\dependencies\include\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="..\dependencies\include\imgui\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\dependencies\include\imgui\imgui.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\include\imgui\imgui_internal.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="src\GUI\GUIFileExplorer.h" />
+    <ClInclude Include="src\GUI\GUIViewport.h" />
+    <ClInclude Include="src\GUI\GUI.h" />
+    <ClInclude Include="src\GUI\GUITest.h" />
+    <ClInclude Include="src\GUI\GUIUSDAttributeEditor.h" />
+    <ClInclude Include="src\OpenGl\OGLVertexArray.h" />
+    <ClInclude Include="src\IMGUILayer.h" />
+    <ClInclude Include="src\SceneRenderLayer.h" />
+    <ClInclude Include="src\OpenGl\OGLFrameBuffer.h" />
+    <ClInclude Include="src\Renderer\FrameBuffer.h" />
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Scene\Grid.h" />
+    <ClInclude Include="src\Scene\Scene.h" />
+    <ClInclude Include="src\OpenGl\OGLRendererAPI.h" />
+    <ClInclude Include="src\OpenGl\OGLBuffer.h" />
+    <ClInclude Include="src\OpenGl\OGLShader.h" />
+    <ClInclude Include="src\Renderer\Buffer.h" />
+    <ClInclude Include="src\Renderer\VertexArray.h" />
+    <ClInclude Include="src\Renderer\RenderCommand.h" />
+    <ClInclude Include="src\Renderer\RendererAPI.h" />
+    <ClInclude Include="src\Renderer\Shader.h" />
+    <ClInclude Include="src\Input.h" />
+    <ClInclude Include="src\OpenGl\OGLGraphicsContext.h" />
+    <ClInclude Include="src\Scene\Camera.h" />
+    <ClInclude Include="src\Layer.h" />
+    <ClInclude Include="src\KeyandMouseCodes.h" />
+    <ClInclude Include="src\Scene\Node.h" />
+    <ClInclude Include="src\Renderer\Renderer.h" />
+    <ClInclude Include="src\Core.h" />
+    <ClInclude Include="src\Events\Event.h" />
+    <ClInclude Include="src\Events\Events.h" />
+    <ClInclude Include="src\Events\Message_Bus.h" />
+    <ClInclude Include="src\Renderer\Graphics_Context.h" />
+    <ClInclude Include="src\window.h" />
+    <ClInclude Include="src\Scene\USD\USDStage.h" />
+    <ClInclude Include="src\Scene\USD\USDHierarchyItem.h" />
+    <ClInclude Include="src\Scene\USD\USDHierarchyModel.h" />
+    <ClInclude Include="src\GUI\USDHierarchyGUI.h" />
+    <ClInclude Include="src\Scene\USD\USDPrim.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C9C1AC6A-3A83-4E36-8B1B-6C1A821D81AA}</ProjectGuid>
+    <RootNamespace>dscc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\danth\Documents\Projects\VisualStudio\dscc\dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\danth\Documents\Projects\VisualStudio\dscc\dependencies\libraries;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\danth\Desktop\dscc\dependencies\include\assimp_build\include;C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\include\boost-1_70;C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\include;$(SolutionDir)\dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\lib;C:\Users\danth\Desktop\dscc\dependencies\libraries;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\danth\Desktop\dscc\dependencies\include\assimp_build\include;C:\Users\danth\AppData\Local\Programs\Python\Python36\include;C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\include\boost-1_70;C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\include;C:\Users\danth\Desktop\dscc\dependencies\include;$(SolutionDir)\dependencies\include;C:\Users\danth\Desktop\dscc\dependencies\include\imgui\backends;C:\Users\danth\Desktop\dscc\dependencies\include\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-DTBB_USE_DEBUG=0 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;usd.lib;tf.lib;sdf.lib;vt.lib;gf.lib;arch.lib;usdGeom.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\danth\AppData\Local\Programs\Python\Python36\libs;C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\lib;C:\Users\danth\Desktop\dscc\dependencies\libraries;$(SolutionDir)\dependencies\libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\danth\Desktop\dscc\dependencies\include\assimp_build\include;C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\include\boost-1_70;C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\include;C:\Users\danth\AppData\Local\Programs\Python\Python36\include;C:\Users\danth\Desktop\dscc\dependencies\include\imgui\backends;C:\Users\danth\Desktop\dscc\dependencies\include\imgui;$(SolutionDir)\dependencies\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-DTBB_USE_DEBUG=0 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;usd.lib;tf.lib;sdf.lib;vt.lib;gf.lib;arch.lib;usdGeom.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\danth\Desktop\dscc\dependencies\include\usd-21-05-usd-win64_py36_release\lib;C:\Users\danth\Desktop\dscc\dependencies\libraries;C:\Users\danth\AppData\Local\Programs\Python\Python36\libs;$(SolutionDir)\dependencies\libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
